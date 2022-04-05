@@ -1,0 +1,1124 @@
+{
+  "rmaps": {
+    "RMap_External_Ajdovscina_from_PeerAjdovscina_0": [
+      {
+        "name": "RMap_External_Ajdovscina_from_PeerAjdovscina_0",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          },
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "RMap_Ajdovscina_to_Divaca": [
+      {
+        "name": "RMap_Ajdovscina_to_Divaca",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ajdovscina_from_Divaca": [
+      {
+        "name": "RMap_Ajdovscina_from_Divaca",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:1",
+                "100:1",
+                "100:1"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 2
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Ajdovscina_from_Divaca",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ajdovscina_to_NovaTTGorica": [
+      {
+        "name": "RMap_Ajdovscina_to_NovaTTGorica",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ajdovscina_from_NovaTTGorica": [
+      {
+        "name": "RMap_Ajdovscina_from_NovaTTGorica",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.46/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Ajdovscina_from_NovaTTGorica",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ajdovscina_to_PeerAjdovscina_0": [
+      {
+        "name": "RMap_Ajdovscina_to_PeerAjdovscina_0",
+        "access": "deny",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_External_Divaca_from_PeerDivaca_1": [
+      {
+        "name": "RMap_External_Divaca_from_PeerDivaca_1",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          },
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "RMap_Divaca_to_Ajdovscina": [
+      {
+        "name": "RMap_Divaca_to_Ajdovscina",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Divaca_from_Ajdovscina": [
+      {
+        "name": "RMap_Divaca_from_Ajdovscina",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchIpPrefixListList",
+            "prefix_list": {
+              "name": "IpL_Ajdovscina_Divaca_0",
+              "access": "permit",
+              "networks": [
+                "128.0.0.0/24"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 2
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Divaca_from_Ajdovscina",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Divaca_to_Koper": [
+      {
+        "name": "RMap_Divaca_to_Koper",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Divaca_from_Koper": [
+      {
+        "name": "RMap_Divaca_from_Koper",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Divaca_to_PeerDivaca_1": [
+      {
+        "name": "RMap_Divaca_to_PeerDivaca_1",
+        "access": "deny",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Divaca_to_Portoroz": [
+      {
+        "name": "RMap_Divaca_to_Portoroz",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Divaca_from_Portoroz": [
+      {
+        "name": "RMap_Divaca_from_Portoroz",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Divaca_to_Senozece": [
+      {
+        "name": "RMap_Divaca_to_Senozece",
+        "access": "deny",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Divaca_from_Senozece": [
+      {
+        "name": "RMap_Divaca_from_Senozece",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.62/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Divaca_from_Senozece",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_NovaTTGorica_to_Ajdovscina": [
+      {
+        "name": "RMap_NovaTTGorica_to_Ajdovscina",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_NovaTTGorica_from_Ajdovscina": [
+      {
+        "name": "RMap_NovaTTGorica_from_Ajdovscina",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_NovaTTGorica_from_Ajdovscina",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_NovaTTGorica_to_Ljubljana": [
+      {
+        "name": "RMap_NovaTTGorica_to_Ljubljana",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_NovaTTGorica_from_Ljubljana": [
+      {
+        "name": "RMap_NovaTTGorica_from_Ljubljana",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchIpPrefixListList",
+            "prefix_list": {
+              "name": "IpL_Ljubljana_NovaTTGorica_0",
+              "access": "permit",
+              "networks": [
+                "128.0.1.0/24"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_NovaTTGorica_from_Ljubljana",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_NovaTTGorica_to_Tolmin": [
+      {
+        "name": "RMap_NovaTTGorica_to_Tolmin",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_NovaTTGorica_from_Tolmin": [
+      {
+        "name": "RMap_NovaTTGorica_from_Tolmin",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Portoroz_to_Divaca": [],
+    "RMap_Portoroz_from_Divaca": [
+      {
+        "name": "RMap_Portoroz_from_Divaca",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Portoroz_to_Izola": [],
+    "RMap_Portoroz_from_Izola": [
+      {
+        "name": "RMap_Portoroz_from_Izola",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Senozece_to_Divaca": [
+      {
+        "name": "RMap_Senozece_to_Divaca",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Senozece_from_Divaca": [
+      {
+        "name": "RMap_Senozece_from_Divaca",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Senozece_to_Postojna": [],
+    "RMap_Senozece_from_Postojna": [
+      {
+        "name": "RMap_Senozece_from_Postojna",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Senozece_from_Postojna",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Senozece_to_Sezana": [
+      {
+        "name": "RMap_Senozece_to_Sezana",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Senozece_from_Sezana": [
+      {
+        "name": "RMap_Senozece_from_Sezana",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Koper_to_Divaca": [],
+    "RMap_Koper_from_Divaca": [
+      {
+        "name": "RMap_Koper_from_Divaca",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchIpPrefixListList",
+            "prefix_list": {
+              "name": "IpL_Divaca_Koper_0",
+              "access": "permit",
+              "networks": [
+                "128.0.1.0/24"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Koper_from_Divaca",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Koper_to_Izola": [
+      {
+        "name": "RMap_Koper_to_Izola",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Koper_from_Izola": [
+      {
+        "name": "RMap_Koper_from_Izola",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Koper_to_Kranj": [
+      {
+        "name": "RMap_Koper_to_Kranj",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Koper_from_Kranj": [
+      {
+        "name": "RMap_Koper_from_Kranj",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Koper_to_Ljubljana": [
+      {
+        "name": "RMap_Koper_to_Ljubljana",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Koper_from_Ljubljana": [
+      {
+        "name": "RMap_Koper_from_Ljubljana",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_to_Kamnik": [
+      {
+        "name": "RMap_Ljubljana_to_Kamnik",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_from_Kamnik": [
+      {
+        "name": "RMap_Ljubljana_from_Kamnik",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_to_Koper": [
+      {
+        "name": "RMap_Ljubljana_to_Koper",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_from_Koper": [
+      {
+        "name": "RMap_Ljubljana_from_Koper",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.41/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 101
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Ljubljana_from_Koper",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_to_Kovevje": [
+      {
+        "name": "RMap_Ljubljana_to_Kovevje",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_from_Kovevje": [
+      {
+        "name": "RMap_Ljubljana_from_Kovevje",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_to_Kranj": [
+      {
+        "name": "RMap_Ljubljana_to_Kranj",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_from_Kranj": [
+      {
+        "name": "RMap_Ljubljana_from_Kranj",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_to_Lasko": [
+      {
+        "name": "RMap_Ljubljana_to_Lasko",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_from_Lasko": [
+      {
+        "name": "RMap_Ljubljana_from_Lasko",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_to_Maribor": [
+      {
+        "name": "RMap_Ljubljana_to_Maribor",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_from_Maribor": [
+      {
+        "name": "RMap_Ljubljana_from_Maribor",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_to_NovaTTGorica": [
+      {
+        "name": "RMap_Ljubljana_to_NovaTTGorica",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_from_NovaTTGorica": [
+      {
+        "name": "RMap_Ljubljana_from_NovaTTGorica",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.33/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Ljubljana_from_NovaTTGorica",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_to_Postojna": [
+      {
+        "name": "RMap_Ljubljana_to_Postojna",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_from_Postojna": [
+      {
+        "name": "RMap_Ljubljana_from_Postojna",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_to_Trbovlje": [
+      {
+        "name": "RMap_Ljubljana_to_Trbovlje",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Ljubljana_from_Trbovlje": [
+      {
+        "name": "RMap_Ljubljana_from_Trbovlje",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Tolmin_to_Bled": [],
+    "RMap_Tolmin_from_Bled": [
+      {
+        "name": "RMap_Tolmin_from_Bled",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Tolmin_to_NovaTTGorica": [],
+    "RMap_Tolmin_from_NovaTTGorica": [
+      {
+        "name": "RMap_Tolmin_from_NovaTTGorica",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Postojna_to_Ljubljana": [],
+    "RMap_Postojna_from_Ljubljana": [
+      {
+        "name": "RMap_Postojna_from_Ljubljana",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchIpPrefixListList",
+            "prefix_list": {
+              "name": "IpL_Ljubljana_Postojna_0",
+              "access": "permit",
+              "networks": [
+                "128.0.0.0/24"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Postojna_from_Ljubljana",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Postojna_to_Senozece": [
+      {
+        "name": "RMap_Postojna_to_Senozece",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Postojna_from_Senozece": [
+      {
+        "name": "RMap_Postojna_from_Senozece",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Trbovlje_to_Lasko": [],
+    "RMap_Trbovlje_from_Lasko": [
+      {
+        "name": "RMap_Trbovlje_from_Lasko",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Trbovlje_to_Ljubljana": [],
+    "RMap_Trbovlje_from_Ljubljana": [
+      {
+        "name": "RMap_Trbovlje_from_Ljubljana",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Lasko_to_Celje": [],
+    "RMap_Lasko_from_Celje": [
+      {
+        "name": "RMap_Lasko_from_Celje",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Lasko_to_Ljubljana": [],
+    "RMap_Lasko_from_Ljubljana": [
+      {
+        "name": "RMap_Lasko_from_Ljubljana",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Lasko_to_Maribor": [],
+    "RMap_Lasko_from_Maribor": [
+      {
+        "name": "RMap_Lasko_from_Maribor",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Lasko_to_Trbovlje": [],
+    "RMap_Lasko_from_Trbovlje": [
+      {
+        "name": "RMap_Lasko_from_Trbovlje",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Kranj_to_Bled": [],
+    "RMap_Kranj_from_Bled": [
+      {
+        "name": "RMap_Kranj_from_Bled",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Kranj_to_Jesenice": [],
+    "RMap_Kranj_from_Jesenice": [
+      {
+        "name": "RMap_Kranj_from_Jesenice",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Kranj_to_Koper": [],
+    "RMap_Kranj_from_Koper": [
+      {
+        "name": "RMap_Kranj_from_Koper",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Kranj_to_Ljubljana": [],
+    "RMap_Kranj_from_Ljubljana": [
+      {
+        "name": "RMap_Kranj_from_Ljubljana",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Kovevje_to_Ljubljana": [],
+    "RMap_Kovevje_from_Ljubljana": [
+      {
+        "name": "RMap_Kovevje_from_Ljubljana",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Kovevje_to_NovoTTMesto": [],
+    "RMap_Kovevje_from_NovoTTMesto": [
+      {
+        "name": "RMap_Kovevje_from_NovoTTMesto",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Kamnik_to_Celje": [],
+    "RMap_Kamnik_from_Celje": [
+      {
+        "name": "RMap_Kamnik_from_Celje",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Kamnik_to_Ljubljana": [],
+    "RMap_Kamnik_from_Ljubljana": [
+      {
+        "name": "RMap_Kamnik_from_Ljubljana",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Maribor_to_Dravograd": [],
+    "RMap_Maribor_from_Dravograd": [
+      {
+        "name": "RMap_Maribor_from_Dravograd",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Maribor_to_GornjaTTRadgona": [],
+    "RMap_Maribor_from_GornjaTTRadgona": [
+      {
+        "name": "RMap_Maribor_from_GornjaTTRadgona",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Maribor_to_Lasko": [],
+    "RMap_Maribor_from_Lasko": [
+      {
+        "name": "RMap_Maribor_from_Lasko",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Maribor_to_Ljubljana": [],
+    "RMap_Maribor_from_Ljubljana": [
+      {
+        "name": "RMap_Maribor_from_Ljubljana",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Maribor_to_Ptuj": [],
+    "RMap_Maribor_from_Ptuj": [
+      {
+        "name": "RMap_Maribor_from_Ptuj",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Maribor_to_SlovenskaTTBistrica": [],
+    "RMap_Maribor_from_SlovenskaTTBistrica": [
+      {
+        "name": "RMap_Maribor_from_SlovenskaTTBistrica",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Sezana_to_Senozece": [],
+    "RMap_Sezana_from_Senozece": [
+      {
+        "name": "RMap_Sezana_from_Senozece",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Izola_to_Koper": [],
+    "RMap_Izola_from_Koper": [
+      {
+        "name": "RMap_Izola_from_Koper",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Izola_to_Portoroz": [],
+    "RMap_Izola_from_Portoroz": [
+      {
+        "name": "RMap_Izola_from_Portoroz",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ]
+  },
+  "prefix_map": {
+    "P_PeerAjdovscina_0": "128.0.0.0/24",
+    "P_PeerDivaca_1": "128.0.1.0/24",
+    "NovaTTGorica_DASH_Fa0_DASH_0": "10.0.0.46/31",
+    "Senozece_DASH_Fa0_DASH_0": "10.0.0.62/31",
+    "Koper_DASH_Fa1_DASH_1": "10.0.0.41/31",
+    "NovaTTGorica_DASH_Fa0_DASH_1": "10.0.0.33/31"
+  },
+  "inv_prefix_map": {
+    "128.0.0.0/24": "P_PeerAjdovscina_0",
+    "128.0.1.0/24": "P_PeerDivaca_1",
+    "10.0.0.46/31": "NovaTTGorica_DASH_Fa0_DASH_0",
+    "10.0.0.62/31": "Senozece_DASH_Fa0_DASH_0",
+    "10.0.0.41/31": "Koper_DASH_Fa1_DASH_1",
+    "10.0.0.33/31": "NovaTTGorica_DASH_Fa0_DASH_1"
+  }
+}

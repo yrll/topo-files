@@ -1,0 +1,910 @@
+{
+  "rmaps": {
+    "RMap_External_Austin_from_PeerAustin_0": [
+      {
+        "name": "RMap_External_Austin_from_PeerAustin_0",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          },
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "RMap_Austin_to_Dallas": [
+      {
+        "name": "RMap_Austin_to_Dallas",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Austin_from_Dallas": [
+      {
+        "name": "RMap_Austin_from_Dallas",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Austin_to_PeerAustin_0": [],
+    "RMap_Austin_to_SanTTAntonio": [
+      {
+        "name": "RMap_Austin_to_SanTTAntonio",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Austin_from_SanTTAntonio": [
+      {
+        "name": "RMap_Austin_from_SanTTAntonio",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Dallas_to_Albuquerque": [
+      {
+        "name": "RMap_Dallas_to_Albuquerque",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Dallas_from_Albuquerque": [
+      {
+        "name": "RMap_Dallas_from_Albuquerque",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Dallas_to_Atlanta": [
+      {
+        "name": "RMap_Dallas_to_Atlanta",
+        "access": "deny",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Dallas_from_Atlanta": [
+      {
+        "name": "RMap_Dallas_from_Atlanta",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Dallas_to_Austin": [],
+    "RMap_Dallas_from_Austin": [
+      {
+        "name": "RMap_Dallas_from_Austin",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 101
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Dallas_from_Austin",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Dallas_to_Houston": [
+      {
+        "name": "RMap_Dallas_to_Houston",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Dallas_from_Houston": [
+      {
+        "name": "RMap_Dallas_from_Houston",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchIpPrefixListList",
+            "prefix_list": {
+              "name": "IpL_Houston_Dallas_0",
+              "access": "permit",
+              "networks": [
+                "128.0.0.0/24"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 100
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Dallas_from_Houston",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Dallas_to_StTTLouis": [
+      {
+        "name": "RMap_Dallas_to_StTTLouis",
+        "access": "deny",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Dallas_from_StTTLouis": [
+      {
+        "name": "RMap_Dallas_from_StTTLouis",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_SanTTAntonio_to_Austin": [],
+    "RMap_SanTTAntonio_from_Austin": [
+      {
+        "name": "RMap_SanTTAntonio_from_Austin",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.13/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_SanTTAntonio_from_Austin",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_SanTTAntonio_to_Houston": [
+      {
+        "name": "RMap_SanTTAntonio_to_Houston",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_SanTTAntonio_from_Houston": [
+      {
+        "name": "RMap_SanTTAntonio_from_Houston",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Albuquerque_to_Dallas": [],
+    "RMap_Albuquerque_from_Dallas": [
+      {
+        "name": "RMap_Albuquerque_from_Dallas",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Albuquerque_to_Phoenix": [],
+    "RMap_Albuquerque_from_Phoenix": [
+      {
+        "name": "RMap_Albuquerque_from_Phoenix",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Houston_to_Dallas": [
+      {
+        "name": "RMap_Houston_to_Dallas",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Houston_from_Dallas": [
+      {
+        "name": "RMap_Houston_from_Dallas",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Houston_to_SanTTAntonio": [],
+    "RMap_Houston_from_SanTTAntonio": [
+      {
+        "name": "RMap_Houston_from_SanTTAntonio",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Houston_from_SanTTAntonio",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Atlanta_to_Dallas": [],
+    "RMap_Atlanta_from_Dallas": [
+      {
+        "name": "RMap_Atlanta_from_Dallas",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Atlanta_to_Raleigh": [],
+    "RMap_Atlanta_from_Raleigh": [
+      {
+        "name": "RMap_Atlanta_from_Raleigh",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Atlanta_to_Tampa": [],
+    "RMap_Atlanta_from_Tampa": [
+      {
+        "name": "RMap_Atlanta_from_Tampa",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_StTTLouis_to_Chicago": [],
+    "RMap_StTTLouis_from_Chicago": [
+      {
+        "name": "RMap_StTTLouis_from_Chicago",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_StTTLouis_to_Dallas": [],
+    "RMap_StTTLouis_from_Dallas": [
+      {
+        "name": "RMap_StTTLouis_from_Dallas",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_StTTLouis_to_KansasTTCity": [],
+    "RMap_StTTLouis_from_KansasTTCity": [
+      {
+        "name": "RMap_StTTLouis_from_KansasTTCity",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_External_Boston_from_PeerBoston_1": [
+      {
+        "name": "RMap_External_Boston_from_PeerBoston_1",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          },
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          }
+        ]
+      }
+    ],
+    "RMap_Boston_to_Cleveland": [
+      {
+        "name": "RMap_Boston_to_Cleveland",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Boston_from_Cleveland": [
+      {
+        "name": "RMap_Boston_from_Cleveland",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Boston_to_NewTTYork": [
+      {
+        "name": "RMap_Boston_to_NewTTYork",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Boston_from_NewTTYork": [
+      {
+        "name": "RMap_Boston_from_NewTTYork",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Boston_to_PeerBoston_1": [],
+    "RMap_Cleveland_to_Boston": [],
+    "RMap_Cleveland_from_Boston": [
+      {
+        "name": "RMap_Cleveland_from_Boston",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.57/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Cleveland_from_Boston",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Cleveland_to_Detroit": [
+      {
+        "name": "RMap_Cleveland_to_Detroit",
+        "access": "deny",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Cleveland_from_Detroit": [
+      {
+        "name": "RMap_Cleveland_from_Detroit",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Cleveland_to_Pittsburgh": [
+      {
+        "name": "RMap_Cleveland_to_Pittsburgh",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Cleveland_from_Pittsburgh": [
+      {
+        "name": "RMap_Cleveland_from_Pittsburgh",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 2,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:1"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Cleveland_from_Pittsburgh",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_NewTTYork_to_Boston": [],
+    "RMap_NewTTYork_from_Boston": [
+      {
+        "name": "RMap_NewTTYork_from_Boston",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:1",
+                "100:1",
+                "100:1"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 101
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_NewTTYork_from_Boston",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_NewTTYork_to_Philadelphia": [
+      {
+        "name": "RMap_NewTTYork_to_Philadelphia",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_NewTTYork_from_Philadelphia": [
+      {
+        "name": "RMap_NewTTYork_from_Philadelphia",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Pittsburgh_to_Cleveland": [
+      {
+        "name": "RMap_Pittsburgh_to_Cleveland",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Pittsburgh_from_Cleveland": [
+      {
+        "name": "RMap_Pittsburgh_from_Cleveland",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Pittsburgh_to_Washington,TTDC": [],
+    "RMap_Pittsburgh_from_Washington,TTDC": [
+      {
+        "name": "RMap_Pittsburgh_from_Washington,TTDC",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.39/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Pittsburgh_from_Washington,TTDC",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Detroit_to_Chicago": [],
+    "RMap_Detroit_from_Chicago": [
+      {
+        "name": "RMap_Detroit_from_Chicago",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Detroit_to_Cleveland": [],
+    "RMap_Detroit_from_Cleveland": [
+      {
+        "name": "RMap_Detroit_from_Cleveland",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Philadelphia_to_Baltimore": [
+      {
+        "name": "RMap_Philadelphia_to_Baltimore",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Philadelphia_from_Baltimore": [
+      {
+        "name": "RMap_Philadelphia_from_Baltimore",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Philadelphia_to_NewTTYork": [],
+    "RMap_Philadelphia_from_NewTTYork": [
+      {
+        "name": "RMap_Philadelphia_from_NewTTYork",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:1",
+                "100:1",
+                "100:1"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Philadelphia_from_NewTTYork",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Baltimore_to_Philadelphia": [],
+    "RMap_Baltimore_from_Philadelphia": [
+      {
+        "name": "RMap_Baltimore_from_Philadelphia",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.46/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Baltimore_from_Philadelphia",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Baltimore_to_Washington,TTDC": [
+      {
+        "name": "RMap_Baltimore_to_Washington,TTDC",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Baltimore_from_Washington,TTDC": [
+      {
+        "name": "RMap_Baltimore_from_Washington,TTDC",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Washington,TTDC_to_Baltimore": [],
+    "RMap_Washington,TTDC_from_Baltimore": [
+      {
+        "name": "RMap_Washington,TTDC_from_Baltimore",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.48/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Washington,TTDC_from_Baltimore",
+        "access": "deny",
+        "lineno": 20,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Washington,TTDC_to_Pittsburgh": [
+      {
+        "name": "RMap_Washington,TTDC_to_Pittsburgh",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Washington,TTDC_from_Pittsburgh": [
+      {
+        "name": "RMap_Washington,TTDC_from_Pittsburgh",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Washington,TTDC_to_Raleigh": [
+      {
+        "name": "RMap_Washington,TTDC_to_Raleigh",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Washington,TTDC_from_Raleigh": [
+      {
+        "name": "RMap_Washington,TTDC_from_Raleigh",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Raleigh_to_Atlanta": [],
+    "RMap_Raleigh_from_Atlanta": [
+      {
+        "name": "RMap_Raleigh_from_Atlanta",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Raleigh_to_Washington,TTDC": [],
+    "RMap_Raleigh_from_Washington,TTDC": [
+      {
+        "name": "RMap_Raleigh_from_Washington,TTDC",
+        "access": "deny",
+        "lineno": 10,
+        "matches": null,
+        "actions": null
+      }
+    ]
+  },
+  "prefix_map": {
+    "P_PeerAustin_0": "128.0.0.0/24",
+    "P_PeerBoston_1": "128.0.1.0/24",
+    "Philadelphia_DASH_Fa0_DASH_0": "10.0.0.46/31",
+    "Boston_DASH_Fa0_DASH_0": "10.0.0.57/31",
+    "Washington,TTDC_DASH_Fa0_DASH_1": "10.0.0.39/31",
+    "Austin_DASH_Fa1_DASH_0": "10.0.0.13/31",
+    "Baltimore_DASH_Fa0_DASH_1": "10.0.0.48/31"
+  },
+  "inv_prefix_map": {
+    "128.0.0.0/24": "P_PeerAustin_0",
+    "128.0.1.0/24": "P_PeerBoston_1",
+    "10.0.0.46/31": "Philadelphia_DASH_Fa0_DASH_0",
+    "10.0.0.57/31": "Boston_DASH_Fa0_DASH_0",
+    "10.0.0.39/31": "Washington,TTDC_DASH_Fa0_DASH_1",
+    "10.0.0.13/31": "Austin_DASH_Fa1_DASH_0",
+    "10.0.0.48/31": "Baltimore_DASH_Fa0_DASH_1"
+  }
+}
