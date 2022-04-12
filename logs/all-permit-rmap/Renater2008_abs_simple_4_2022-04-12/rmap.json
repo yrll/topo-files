@@ -1,0 +1,1096 @@
+{
+  "rmaps": {
+    "RMap_Nancy_from_PeerNancy_0": [
+      {
+        "name": "RMap_Nancy_from_PeerNancy_0",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      }
+    ],
+    "RMap_Reims_from_Nancy": [
+      {
+        "name": "RMap_Reims_from_Nancy",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.74/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Reims_from_Nancy",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Reims_from_Paris": [
+      {
+        "name": "RMap_Reims_from_Paris",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchIpPrefixListList",
+            "prefix_list": {
+              "name": "IpL_Reims_Paris",
+              "access": "permit",
+              "networks": [
+                "128.0.1.0/24"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 101
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Reims_from_Paris",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Besancon_from_Lyon": [
+      {
+        "name": "RMap_Besancon_from_Lyon",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.74/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Besancon_from_Lyon",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Lyon_from_Montpellier": [
+      {
+        "name": "RMap_Lyon_from_Montpellier",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchIpPrefixListList",
+            "prefix_list": {
+              "name": "IpL_Lyon_Montpellier",
+              "access": "permit",
+              "networks": [
+                "128.0.2.0/24"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Lyon_from_Montpellier",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Dijon_from_Lyon": [
+      {
+        "name": "RMap_Dijon_from_Lyon",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.21/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Dijon_from_Lyon",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Dijon_from_Besancon": [
+      {
+        "name": "RMap_Dijon_from_Besancon",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.74/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:2"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Dijon_from_Besancon",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_ClermontFerrand_from_Lyon": [
+      {
+        "name": "RMap_ClermontFerrand_from_Lyon",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 15,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:3",
+                "100:3"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_ClermontFerrand_from_Lyon",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_CERN_from_Lyon": [
+      {
+        "name": "RMap_CERN_from_Lyon",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchIpPrefixListList",
+            "prefix_list": {
+              "name": "IpL_CERN_Lyon",
+              "access": "permit",
+              "networks": [
+                "128.0.3.0/24"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 101
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_CERN_from_Lyon",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Martinique,TTGuadeloupe,TTCayenne_from_Lyon": [
+      {
+        "name": "RMap_Martinique,TTGuadeloupe,TTCayenne_from_Lyon",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 19,
+              "access": "permit",
+              "communities": [
+                "100:3",
+                "100:3",
+                "100:3"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Martinique,TTGuadeloupe,TTCayenne_from_Lyon",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Grenoble_from_Lyon": [
+      {
+        "name": "RMap_Grenoble_from_Lyon",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchIpPrefixListList",
+            "prefix_list": {
+              "name": "IpL_Grenoble_Lyon",
+              "access": "permit",
+              "networks": [
+                "128.0.3.0/24"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 101
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Grenoble_from_Lyon",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_InternetTTmondial_from_Lyon": [
+      {
+        "name": "RMap_InternetTTmondial_from_Lyon",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 21,
+              "access": "permit",
+              "communities": [
+                "100:3",
+                "100:3",
+                "100:3"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_InternetTTmondial_from_Lyon",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_InternetTTmondial_from_Paris": [
+      {
+        "name": "RMap_InternetTTmondial_from_Paris",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 15,
+              "access": "permit",
+              "communities": [
+                "100:3",
+                "100:3",
+                "100:3"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_InternetTTmondial_from_Paris",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Paris_from_Lyon": [
+      {
+        "name": "RMap_Paris_from_Lyon",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 7,
+              "access": "permit",
+              "communities": [
+                "100:1",
+                "100:2",
+                "100:1"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Paris_from_Lyon",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Paris_from_PeerParis_1": [
+      {
+        "name": "RMap_Paris_from_PeerParis_1",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      }
+    ],
+    "RMap_Toulouse_from_Montpellier": [
+      {
+        "name": "RMap_Toulouse_from_Montpellier",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchIpPrefixListList",
+            "prefix_list": {
+              "name": "IpL_Toulouse_Montpellier",
+              "access": "permit",
+              "networks": [
+                "128.0.3.0/24"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Toulouse_from_Montpellier",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Toulouse_from_PeerToulouse_3": [
+      {
+        "name": "RMap_Toulouse_from_PeerToulouse_3",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      }
+    ],
+    "RMap_Cadarache_from_Marseille": [
+      {
+        "name": "RMap_Cadarache_from_Marseille",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.74/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Cadarache_from_Marseille",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Nice_from_Marseille": [
+      {
+        "name": "RMap_Nice_from_Marseille",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 8,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:1",
+                "100:1"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Nice_from_Marseille",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Orleans_from_Paris": [
+      {
+        "name": "RMap_Orleans_from_Paris",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 12,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Orleans_from_Paris",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_SFINX_from_Paris": [
+      {
+        "name": "RMap_SFINX_from_Paris",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 2,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:3"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_SFINX_from_Paris",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_SFINX_from_PeerSFINX_2": [
+      {
+        "name": "RMap_SFINX_from_PeerSFINX_2",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:2"
+            ],
+            "additive": true
+          }
+        ]
+      }
+    ],
+    "RMap_Geant2_from_Paris": [
+      {
+        "name": "RMap_Geant2_from_Paris",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 13,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Geant2_from_Paris",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_NodeID13_from_Paris": [
+      {
+        "name": "RMap_NodeID13_from_Paris",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 14,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_NodeID13_from_Paris",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Poiters_from_Paris": [
+      {
+        "name": "RMap_Poiters_from_Paris",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 16,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Poiters_from_Paris",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Compiegne_from_Paris": [
+      {
+        "name": "RMap_Compiegne_from_Paris",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 18,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Compiegne_from_Paris",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Lille_from_Paris": [
+      {
+        "name": "RMap_Lille_from_Paris",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 19,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Lille_from_Paris",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Rouen_from_Paris": [
+      {
+        "name": "RMap_Rouen_from_Paris",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 20,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Rouen_from_Paris",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Bordeaux_from_Toulouse": [
+      {
+        "name": "RMap_Bordeaux_from_Toulouse",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.74/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Bordeaux_from_Toulouse",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Pau_from_Toulouse": [
+      {
+        "name": "RMap_Pau_from_Toulouse",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 2,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Pau_from_Toulouse",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ]
+  },
+  "prefix_map": {
+    "P_PeerNancy_0": "128.0.0.0/24",
+    "P_PeerParis_1": "128.0.1.0/24",
+    "P_PeerSFINX_2": "128.0.2.0/24",
+    "P_PeerToulouse_3": "128.0.3.0/24",
+    "Paris_DASH_Fa5_DASH_0": "10.0.0.74/31",
+    "Lyon_DASH_Fa1_DASH_1": "10.0.0.21/31"
+  },
+  "inv_prefix_map": {
+    "128.0.0.0/24": "P_PeerNancy_0",
+    "128.0.1.0/24": "P_PeerParis_1",
+    "128.0.2.0/24": "P_PeerSFINX_2",
+    "128.0.3.0/24": "P_PeerToulouse_3",
+    "10.0.0.74/31": "Paris_DASH_Fa5_DASH_0",
+    "10.0.0.21/31": "Lyon_DASH_Fa1_DASH_1"
+  }
+}

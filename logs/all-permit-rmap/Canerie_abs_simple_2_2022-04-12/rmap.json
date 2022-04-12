@@ -1,0 +1,202 @@
+{
+  "rmaps": {
+    "RMap_Fredericton_from_PeerFredericton_0": [
+      {
+        "name": "RMap_Fredericton_from_PeerFredericton_0",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      }
+    ],
+    "RMap_Charlottetown_from_Halifax": [
+      {
+        "name": "RMap_Charlottetown_from_Halifax",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchIpPrefixListList",
+            "prefix_list": {
+              "name": "IpL_Charlottetown_Halifax",
+              "access": "permit",
+              "networks": [
+                "128.0.0.0/24"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Charlottetown_from_Halifax",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Montreal_from_Halifax": [
+      {
+        "name": "RMap_Montreal_from_Halifax",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.35/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Montreal_from_Halifax",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Montreal_from_Fredericton": [
+      {
+        "name": "RMap_Montreal_from_Fredericton",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:1",
+                "100:1",
+                "100:1"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Montreal_from_Fredericton",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Halifax_from_PeerHalifax_1": [
+      {
+        "name": "RMap_Halifax_from_PeerHalifax_1",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      }
+    ],
+    "RMap_NewTTYork_from_Halifax": [
+      {
+        "name": "RMap_NewTTYork_from_Halifax",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 5,
+              "access": "permit",
+              "communities": [
+                "100:1",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_NewTTYork_from_Halifax",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ]
+  },
+  "prefix_map": {
+    "P_PeerFredericton_0": "128.0.0.0/24",
+    "P_PeerHalifax_1": "128.0.1.0/24",
+    "Halifax_DASH_Fa0_DASH_1": "10.0.0.35/31"
+  },
+  "inv_prefix_map": {
+    "128.0.0.0/24": "P_PeerFredericton_0",
+    "128.0.1.0/24": "P_PeerHalifax_1",
+    "10.0.0.35/31": "Halifax_DASH_Fa0_DASH_1"
+  }
+}
