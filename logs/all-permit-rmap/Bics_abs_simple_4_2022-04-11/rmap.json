@@ -1,0 +1,1166 @@
+{
+  "rmaps": {
+    "RMap_Barcelona_from_PeerBarcelona_0": [
+      {
+        "name": "RMap_Barcelona_from_PeerBarcelona_0",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      }
+    ],
+    "RMap_Madrid_from_Barcelona": [
+      {
+        "name": "RMap_Madrid_from_Barcelona",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.97/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Madrid_from_Barcelona",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Lyon_from_Marseille": [
+      {
+        "name": "RMap_Lyon_from_Marseille",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.38/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Lyon_from_Marseille",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Vienna_from_Frankfurt": [
+      {
+        "name": "RMap_Vienna_from_Frankfurt",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchIpPrefixListList",
+            "prefix_list": {
+              "name": "IpL_Vienna_Frankfurt",
+              "access": "permit",
+              "networks": [
+                "128.0.1.0/24"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Vienna_from_Frankfurt",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Roma_from_Milan": [
+      {
+        "name": "RMap_Roma_from_Milan",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.38/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Roma_from_Milan",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Zurich_from_Frankfurt": [
+      {
+        "name": "RMap_Zurich_from_Frankfurt",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.38/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 100
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:2"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Zurich_from_Frankfurt",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Zurich_from_Milan": [
+      {
+        "name": "RMap_Zurich_from_Milan",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.38/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Zurich_from_Milan",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Frankfurt_from_Warsaw": [
+      {
+        "name": "RMap_Frankfurt_from_Warsaw",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.79/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Frankfurt_from_Warsaw",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Bratislava_from_Vienna": [
+      {
+        "name": "RMap_Bratislava_from_Vienna",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.38/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Bratislava_from_Vienna",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Bratislava_from_Budapest": [
+      {
+        "name": "RMap_Bratislava_from_Budapest",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.5/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Bratislava_from_Budapest",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Praha_from_Warsaw": [
+      {
+        "name": "RMap_Praha_from_Warsaw",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchNextHop",
+            "nexthop": "10.0.0.38/31"
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Praha_from_Warsaw",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Praha_from_Frankfurt": [
+      {
+        "name": "RMap_Praha_from_Frankfurt",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 14,
+              "access": "permit",
+              "communities": [
+                "100:3",
+                "100:3",
+                "100:3"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 101
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Praha_from_Frankfurt",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Strasbourg_from_Frankfurt": [
+      {
+        "name": "RMap_Strasbourg_from_Frankfurt",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 9,
+              "access": "permit",
+              "communities": [
+                "100:3",
+                "100:3",
+                "100:3"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Strasbourg_from_Frankfurt",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Strasbourg_from_PeerStrasbourg_3": [
+      {
+        "name": "RMap_Strasbourg_from_PeerStrasbourg_3",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      }
+    ],
+    "RMap_Brussels_from_Frankfurt": [
+      {
+        "name": "RMap_Brussels_from_Frankfurt",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 16,
+              "access": "permit",
+              "communities": [
+                "100:1",
+                "100:1",
+                "100:2"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Brussels_from_Frankfurt",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Amsterdam_from_Frankfurt": [
+      {
+        "name": "RMap_Amsterdam_from_Frankfurt",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 17,
+              "access": "permit",
+              "communities": [
+                "100:3",
+                "100:2",
+                "100:2"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Amsterdam_from_Frankfurt",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Amsterdam_from_Brussels": [
+      {
+        "name": "RMap_Amsterdam_from_Brussels",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 3,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Amsterdam_from_Brussels",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Amsterdam_from_London": [
+      {
+        "name": "RMap_Amsterdam_from_London",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Amsterdam_from_London",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Stockholm_from_Frankfurt": [
+      {
+        "name": "RMap_Stockholm_from_Frankfurt",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 18,
+              "access": "permit",
+              "communities": [
+                "100:2",
+                "100:1",
+                "100:1"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:2"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Stockholm_from_Frankfurt",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Kiev_from_Warsaw": [
+      {
+        "name": "RMap_Kiev_from_Warsaw",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 8,
+              "access": "permit",
+              "communities": [
+                "100:3",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Kiev_from_Warsaw",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Lisbon_from_PeerLisbon_1": [
+      {
+        "name": "RMap_Lisbon_from_PeerLisbon_1",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      }
+    ],
+    "RMap_Dublin_from_London": [
+      {
+        "name": "RMap_Dublin_from_London",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 2,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Dublin_from_London",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Paris_from_Brussels": [
+      {
+        "name": "RMap_Paris_from_Brussels",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 4,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Paris_from_Brussels",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Paris_from_London": [
+      {
+        "name": "RMap_Paris_from_London",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 3,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Paris_from_London",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Rotterdam_from_Brussels": [
+      {
+        "name": "RMap_Rotterdam_from_Brussels",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 101
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Rotterdam_from_Brussels",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Luxembourg_from_Brussels": [
+      {
+        "name": "RMap_Luxembourg_from_Brussels",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 2,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Luxembourg_from_Brussels",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Luxembourg_from_Strasbourg": [
+      {
+        "name": "RMap_Luxembourg_from_Strasbourg",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 2,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Luxembourg_from_Strasbourg",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Sofia_from_PeerSofia_2": [
+      {
+        "name": "RMap_Sofia_from_PeerSofia_2",
+        "access": "permit",
+        "lineno": 10,
+        "matches": null,
+        "actions": [
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:2"
+            ],
+            "additive": true
+          }
+        ]
+      }
+    ],
+    "RMap_Athens_from_Sofia": [
+      {
+        "name": "RMap_Athens_from_Sofia",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:3"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Athens_from_Sofia",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Zagreb_from_Budapest": [
+      {
+        "name": "RMap_Zagreb_from_Budapest",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 2,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Zagreb_from_Budapest",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Istanbul_from_Bucharest": [
+      {
+        "name": "RMap_Istanbul_from_Bucharest",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:1"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Istanbul_from_Bucharest",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ],
+    "RMap_Basel_from_Strasbourg": [
+      {
+        "name": "RMap_Basel_from_Strasbourg",
+        "access": "permit",
+        "lineno": 10,
+        "matches": [
+          {
+            "match_type": "MatchCommunitiesList",
+            "communities_list": {
+              "list_id": 1,
+              "access": "permit",
+              "communities": [
+                "100:0",
+                "100:0",
+                "100:0"
+              ]
+            }
+          }
+        ],
+        "actions": [
+          {
+            "action": "ActionSetLocalPref",
+            "value": 1
+          },
+          {
+            "action": "ActionSetCommunity",
+            "communities": [
+              "100:0"
+            ],
+            "additive": true
+          }
+        ]
+      },
+      {
+        "name": "RMap_Basel_from_Strasbourg",
+        "access": "permit",
+        "lineno": 100,
+        "matches": null,
+        "actions": null
+      }
+    ]
+  },
+  "prefix_map": {
+    "P_PeerBarcelona_0": "128.0.0.0/24",
+    "P_PeerLisbon_1": "128.0.1.0/24",
+    "P_PeerSofia_2": "128.0.2.0/24",
+    "P_PeerStrasbourg_3": "128.0.3.0/24",
+    "Budapest_DASH_Fa0_DASH_0": "10.0.0.5/31",
+    "Strasbourg_DASH_Fa0_DASH_0": "10.0.0.38/31",
+    "Warsaw_DASH_Fa0_DASH_0": "10.0.0.79/31",
+    "Barcelona_DASH_Fa0_DASH_0": "10.0.0.97/31"
+  },
+  "inv_prefix_map": {
+    "128.0.0.0/24": "P_PeerBarcelona_0",
+    "128.0.1.0/24": "P_PeerLisbon_1",
+    "128.0.2.0/24": "P_PeerSofia_2",
+    "128.0.3.0/24": "P_PeerStrasbourg_3",
+    "10.0.0.5/31": "Budapest_DASH_Fa0_DASH_0",
+    "10.0.0.38/31": "Strasbourg_DASH_Fa0_DASH_0",
+    "10.0.0.79/31": "Warsaw_DASH_Fa0_DASH_0",
+    "10.0.0.97/31": "Barcelona_DASH_Fa0_DASH_0"
+  }
+}
