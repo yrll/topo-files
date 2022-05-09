@@ -1,6 +1,6 @@
 // Config file of V2Ray. This file follows standard JSON format, with comments support.
 // Uncomment entries below to satisfy your needs. Also read our manual for more detail at
-// https://www.v2fly.org/
+// https://www.4444444444444444444444/
 {
   "log": {
     // By default, V2Ray writes access log to stdout.
@@ -13,33 +13,7 @@
     "loglevel": "warning"
   },
   // List of inbound proxy configurations.
-  "inbounds": [{
-    // Port to listen on. You may need root access if the value is less than 1024.
-    "port": 1080,
 
-    // IP address to listen on. Change to "0.0.0.0" to listen on all network interfaces.
-    "listen": "127.0.0.1",
-
-    // Tag of the inbound proxy. May be used for routing.
-    "tag": "socks-inbound",
-
-    // Protocol name of inbound proxy.
-    "protocol": "socks",
-
-    // Settings of the protocol. Varies based on protocol.
-    "settings": {
-      "auth": "noauth",
-      "udp": false,
-      "ip": "127.0.0.1"
-    },
-
-    // Enable sniffing on TCP connection.
-    "sniffing": {
-      "enabled": true,
-      // Target domain will be overriden to the one carried by the connection, if the connection is HTTP or HTTPS.
-      "destOverride": ["http", "tls"]
-    }
-  }],
   // List of outbound proxy configurations.
   "outbounds": [{
     // Protocol name of the outbound proxy.
@@ -50,6 +24,13 @@
 
     // Tag of the outbound. May be used for routing.
     "tag": "direct"
+  },{
+    "protocol": "blackhole",
+    "settings": {},
+    "tag": "blocked"
+  }],
+
+  "tag": "direct"
   },{
     "protocol": "blackhole",
     "settings": {},
