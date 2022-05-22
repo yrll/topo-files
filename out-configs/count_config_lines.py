@@ -2,7 +2,7 @@ import os
 
 dirr = os.getcwd()
 
-dirr = "/home/yrl/PycharmProjects/synet-py3/out-configs/new_2022-04-28_1"
+dirr = "/home/yrl/PycharmProjects/synet-py3/out-configs/new_2022-05-10_1"
 
 def count_prefix_num(file):
     assert os.path.exists(file)
